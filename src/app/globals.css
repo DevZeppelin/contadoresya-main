@@ -1,0 +1,432 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f8fa;
+
+  --surface: #ffffff;
+
+  --primary: #2497a8;
+  --primary-dark: #1e7f8d;
+  --primary-soft: #dff4f7;
+
+  --secondary: #b8d43b;
+
+  --text: #16323a;
+  --text-soft: #557178;
+
+  --border: #e5eef0;
+
+  --gradient:
+    linear-gradient(
+      135deg,
+      #2497a8 0%,
+      #2bb6ca 100%
+    );
+
+  --shadow:
+    0 10px 35px rgba(36, 151, 168, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family:
+    Inter,
+    system-ui,
+    sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container-custom {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--secondary);
+}
+
+.section-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+  max-width: 800px;
+}
+
+.text-gradient {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 1rem;
+
+  background: var(--gradient);
+
+  color: white;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 1rem;
+
+  border: 1px solid var(--border);
+
+  background: white;
+
+  color: var(--secondary);
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #f1f5f9;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card-soft {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 1.5rem;
+  padding: 2rem;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04);
+
+  transition: all 0.3s ease;
+}
+
+.card-soft:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-glass {
+  backdrop-filter: blur(20px);
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+  border: 1px solid rgba(255,255,255,0.3);
+
+  border-radius: 1.5rem;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-gradient {
+  background: var(--gradient);
+}
+
+.hero-overlay {
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.12),
+      transparent 45%
+    );
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section-padding {
+  padding-block: 6rem;
+  padding-inline: 1.5rem;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+  .section-padding {
+    padding-inline: 3rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1280px) {
+  .section-padding {
+    padding-inline: 6rem;
+  }
+}
+
+.section-light {
+  background: white;
+}
+
+.section-gray {
+  background: #f8fafc;
+}
+
+.section-dark {
+  background: var(--secondary);
+  color: white;
+}
+
+/* =========================
+   BADGES
+========================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding:
+    0.5rem
+    0.9rem;
+
+  border-radius: 999px;
+
+  background:
+    rgba(37, 99, 235, 0.1);
+
+  color: var(--primary);
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* =========================
+   FORMS
+========================= */
+
+.input {
+  width: 100%;
+
+  padding:
+    1rem
+    1rem;
+
+  border-radius: 1rem;
+
+  border: 1px solid var(--border);
+
+  background: white;
+
+  color: var(--text);
+
+  outline: none;
+
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 4px rgba(37,99,235,0.1);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header-blur {
+  backdrop-filter: blur(14px);
+
+  background:
+    rgba(255,255,255,0.85);
+
+  border-bottom:
+    1px solid rgba(255,255,255,0.3);
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonial-card {
+  background: white;
+
+  border-radius: 1.5rem;
+
+  padding: 2rem;
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.04);
+}
+
+.stars {
+  color: #f59e0b;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map-wrapper {
+  overflow: hidden;
+
+  border-radius: 1.5rem;
+
+  border: 1px solid var(--border);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: #0f172a;
+  color: white;
+}
+
+.footer a {
+  color: #cbd5e1;
+  transition: all 0.2s ease;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.whatsapp-float {
+  position: fixed;
+
+  right: 1.5rem;
+  bottom: 1.5rem;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 999px;
+
+  background: #22c55e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 15px 35px rgba(34,197,94,0.35);
+
+  z-index: 999;
+
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.fade-up {
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e2e8f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-block: 4rem;
+  }
+
+  .card-soft {
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
