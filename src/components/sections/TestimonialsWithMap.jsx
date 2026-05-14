@@ -28,7 +28,7 @@ export default function TestimonialsWithMap({
           </div>
           <div className="overflow-hidden rounded-[2rem] border border-cyan-100 bg-white shadow-xl">
             <div className="p-6">
-              <h3 className="text-2xl font-black">Atención online y local</h3>
+              <h3 className="text-2xl font-black">Atención online y local!</h3>
               <p className="mt-2 text-slate-600">
                 Podés reemplazar este iframe por el mapa real o perfil de Google
                 Maps del estudio.
